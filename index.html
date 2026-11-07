@@ -510,6 +510,12 @@ footer img{height:16px;width:auto;opacity:.9}
 <script>
   const h=document.querySelector('header');
   addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>8),{passive:true});
+  document.getElementById('lead').addEventListener('submit',e=>{
+    e.preventDefault();
+    const d=Object.fromEntries(new FormData(e.target));
+    const body=`Name: ${d.Name}\nHotel / company: ${d.Hotel}\nEmail: ${d.email}\nRooms / units: ${d.Rooms}\n\n${d.Message||''}`;
+    location.href='mailto:grunicheva33@gmail.com?subject='+encodeURIComponent('Free review request: '+d.Hotel)+'&body='+encodeURIComponent(body);
+  });
 </script>
 </body>
 </html>
