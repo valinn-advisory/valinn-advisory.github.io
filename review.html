@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Hotel Tech Review | Valinn</title>
+<meta name="description" content="A short questionnaire for hotels: tell us how your systems and guest communication work today, and we'll send you 2–3 practical recommendations. Free for the hotel.">
+<meta property="og:title" content="Free Hotel Tech Review | Valinn">
+<meta property="og:description" content="Answer a few short questions about your hotel's systems and guest communication. We'll send you 2–3 practical recommendations within 1–2 working days. Free for the hotel.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://valinn-advisory.github.io/review.html">
+<meta property="og:image" content="https://valinn-advisory.github.io/assets/img/og.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/valinn-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071E3D; --ink-2:#2B3B55; --muted:#5B6B82;
+  --blue:#0A66FF; --blue-soft:#E8F0FF; --blue-line:#B9CFFB;
+  --bg:#FFFFFF; --bg-alt:#F5F8FD; --line:#E2E8F2;
+  --navy:#0B1F3F;
+  --radius:18px;
+  --max:1120px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg-alt);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
+.kicker::before{content:"";width:28px;height:2px;background:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 24px rgba(10,102,255,.28)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(10,102,255,.34)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.nav .logo img{height:32px;width:auto}
+.nav .back{color:var(--ink-2);text-decoration:none;font-size:.95rem;font-weight:500}
+.nav .back:hover{color:var(--blue)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#F7FAFF 0%,var(--bg-alt) 100%)}
+.hero::before{content:"";position:absolute;right:-220px;top:-280px;width:720px;height:720px;border-radius:50%;background:radial-gradient(closest-side,#DCE8FF,rgba(220,232,255,0));pointer-events:none}
+.hero .wrap{position:relative;max-width:860px;padding-block:64px 40px}
+.hero h1{font-size:clamp(2.1rem,4.2vw,3.1rem);font-weight:700;margin:20px 0 18px}
+.hero h1 span{color:var(--blue)}
+.hero .lead{font-size:1.15rem;color:var(--ink-2);max-width:40em}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;padding:0;list-style:none}
+.facts li{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:500;color:var(--ink-2)}
+.facts svg{width:18px;height:18px;fill:none;stroke:var(--blue);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* form */
+.form-wrap{max-width:860px;padding-block:0 96px}
+form{display:grid;gap:22px;min-width:0}
+.block{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;display:grid;gap:20px;min-width:0;box-shadow:0 10px 30px rgba(7,30,61,.04)}
+.block-head{display:flex;align-items:center;gap:14px}
+.block-head .n{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:700;font-size:.92rem}
+.block-head h2{font-size:1.3rem;font-weight:700}
+.block-head p{font-size:.9rem;color:var(--muted);margin-top:2px}
+.q{display:grid;gap:10px;min-width:0}
+.q > .qt{font-weight:600;color:var(--ink);font-size:1rem;line-height:1.45}
+.q .hint{font-size:.86rem;color:var(--muted);font-weight:400;margin-top:-4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+label.f{display:grid;gap:6px;font-size:.88rem;font-weight:600;color:var(--ink-2);min-width:0}
+label.f .opt{font-weight:400;color:var(--muted)}
+label.f .lt{display:block}
+label.fq{font-size:1rem;color:var(--ink);gap:10px;line-height:1.45}
+input[type=text],input[type=email],input[type=url],input[type=number],select,textarea{font:inherit;font-weight:400;font-size:1rem;color:var(--ink);padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;width:100%;min-width:0}
+input::placeholder,textarea::placeholder{color:#97A5BA}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+textarea{min-height:104px;resize:vertical}
+select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235B6B82' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.req{color:var(--blue)}
+
+/* choice chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1.5px solid var(--line);border-radius:999px;font-size:.92rem;font-weight:500;color:var(--ink-2);cursor:pointer;background:#fff;transition:border-color .15s,background .15s,color .15s;user-select:none}
+.chip span::before{content:"";width:14px;height:14px;border-radius:4px;border:1.5px solid var(--blue-line);flex:none;background:#fff center/10px no-repeat}
+.chip input[type=radio] + span::before{border-radius:50%}
+.chip span:hover{border-color:var(--blue-line)}
+.chip input:checked + span{border-color:var(--blue);background:var(--blue-soft);color:var(--ink)}
+.chip input:checked + span::before{background-color:var(--blue);border-color:var(--blue);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2l2.3 2.3 4.7-5' fill='none' stroke='%23fff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.chip input:focus-visible + span{box-shadow:0 0 0 4px var(--blue-soft);border-color:var(--blue)}
+
+.sys{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.sys label.f{font-weight:500}
+
+.submit{background:var(--navy);color:#fff;border-radius:22px;padding:32px;display:grid;gap:16px;text-align:center;justify-items:center}
+.submit h2{font-size:1.35rem}
+.submit p{color:#C5D3EA;max-width:36em}
+.submit .btn{min-width:260px}
+.nw{white-space:nowrap}
+.submit .small{font-size:.82rem;color:#8A9BB5}
+.submit .small a{color:#8DB6FF}
+
+footer{background:#06152B;color:#8A9BB5;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-block:28px}
+footer .fb{color:inherit;text-decoration:none;white-space:nowrap}
+footer .fb svg{vertical-align:-3px;margin-right:5px}
+footer .fb:hover{color:#fff}
+footer img{height:16px;width:auto;opacity:.9}
+
+@media (max-width:640px){
+  .hero .wrap{padding-block:40px 28px}
+  .block,.submit{padding:24px 20px;border-radius:18px}
+  .grid2,.grid3,.sys{grid-template-columns:1fr}
+  .submit .btn{width:100%;min-width:0}
+  .form-wrap{padding-block:0 64px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="Valinn home"><img src="assets/valinn-logo.svg" alt="Valinn"></a>
+    <a class="back" href="index.html">← Back to site</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">Free Hotel Tech Review</span>
+      <h1>Tell us how your hotel works today. <span>We'll show you what to improve.</span></h1>
+      <p class="lead">Thank you for your interest! These short questions help us understand how your hotel works today. There are no right or wrong answers, and everything stays confidential.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>About 5–7 minutes</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Confidential</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Free for the hotel</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Summary in 1–2 working days</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap form-wrap">
+    <form id="review" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="74a8de21-6177-453f-bb24-bf5c715e7808">
+      <input type="hidden" name="subject" value="Valinn website: Free Tech Review answers">
+      <input type="hidden" name="from_name" value="Valinn website">
+      <input type="hidden" name="redirect" value="https://valinn-advisory.github.io/thanks.html?from=review">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <!-- 1 -->
+      <fieldset class="block" style="margin:0">
+        <div class="block-head"><span class="n">1</span><div><h2>About the hotel</h2><p>So we know who we're talking to.</p></div></div>
+        <div class="grid2">
+          <label class="f"><span class="lt">Your name <span class="req" aria-hidden="true">*</span></span><input type="text" name="Name" required autocomplete="name"></label>
+          <label class="f"><span class="lt">Work email <span class="req" aria-hidden="true">*</span></span><input type="email" name="email" required autocomplete="email"></label>
+        </div>
+        <div class="grid3">
+          <label class="f"><span class="lt">Hotel name <span class="req" aria-hidden="true">*</span></span><input type="text" name="1. Hotel name" required autocomplete="organization"></label>
+          <label class="f"><span class="lt">Number of rooms</span><input type="number" name="1. Rooms" min="1" inputmode="numeric"></label>
+          <label class="f"><span class="lt">Your role</span><input type="text" name="1. Role" placeholder="e.g. GM, owner"></label>
+        </div>
+        <label class="f"><span class="lt">Hotel website <span class="opt">(optional)</span></span><input type="text" name="1. Website" placeholder="www.yourhotel.com" inputmode="url"></label>
+
+        <div class="q">
+          <span class="qt">2. Is the hotel open all year?</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="2. Open all year" value="Yes, all year"><span>Yes, all year</span></label>
+            <label class="chip"><input type="radio" name="2. Open all year" value="Seasonal"><span>Seasonal</span></label>
+          </div>
+        </div>
+        <label class="f fq"><span class="lt">Roughly what share of bookings come direct vs. through OTAs?</span><select name="2. Direct vs OTA">
+            <option value="">Choose…</option>
+            <option>Mostly direct (70%+ direct)</option>
+            <option>About half and half</option>
+            <option>Mostly OTAs (70%+ OTA)</option>
+            <option>Not sure</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <!-- 2 -->
+      <fieldset class="block" style="margin:0">
+        <div class="block-head"><span class="n">2</span><div><h2>Your current systems</h2><p>Write the name if you know it, or leave it blank.</p></div></div>
+        <div class="q">
+          <span class="qt">3. Which systems do you use today?</span>
+          <div class="sys">
+            <label class="f"><span class="lt">PMS</span><input type="text" name="3. PMS" placeholder="Name, or “none”"></label>
+            <label class="f"><span class="lt">Channel manager</span><input type="text" name="3. Channel manager" placeholder="Name, or “none”"></label>
+            <label class="f"><span class="lt">Booking engine</span><input type="text" name="3. Booking engine" placeholder="Name, or “none”"></label>
+            <label class="f"><span class="lt">POS / restaurant</span><input type="text" name="3. POS / restaurant" placeholder="Name, or “none”"></label>
+            <label class="f"><span class="lt">Spa</span><input type="text" name="3. Spa" placeholder="Name, or “none”"></label>
+            <label class="f"><span class="lt">Revenue management</span><input type="text" name="3. Revenue management" placeholder="Name, or “none”"></label>
+          </div>
+        </div>
+        <div class="q">
+          <span class="qt">4. Do these systems talk to each other, or does your team re-type information between them?</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="4. Systems connected" value="Mostly connected"><span>Mostly connected</span></label>
+            <label class="chip"><input type="radio" name="4. Systems connected" value="Partly, some re-typing"><span>Partly, some re-typing</span></label>
+            <label class="chip"><input type="radio" name="4. Systems connected" value="A lot of re-typing"><span>A lot of re-typing</span></label>
+            <label class="chip"><input type="radio" name="4. Systems connected" value="Not sure"><span>Not sure</span></label>
+          </div>
+          <textarea name="4. Comment" placeholder="Anything to add? (optional)" style="min-height:76px"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- 3 -->
+      <fieldset class="block" style="margin:0">
+        <div class="block-head"><span class="n">3</span><div><h2>Guest communication</h2><p>How guests reach you, and how fast you answer.</p></div></div>
+        <div class="q">
+          <span class="qt">5. How do guests contact you before and during their stay?</span>
+          <span class="hint">Choose all that apply.</span>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="5. Email" value="yes"><span>Email</span></label>
+            <label class="chip"><input type="checkbox" name="5. Phone" value="yes"><span>Phone</span></label>
+            <label class="chip"><input type="checkbox" name="5. WhatsApp" value="yes"><span>WhatsApp</span></label>
+            <label class="chip"><input type="checkbox" name="5. Website chat" value="yes"><span>Website chat</span></label>
+            <label class="chip"><input type="checkbox" name="5. Social media" value="yes"><span>Social media</span></label>
+            <label class="chip"><input type="checkbox" name="5. OTA messages" value="yes"><span>Booking.com / OTA messages</span></label>
+          </div>
+        </div>
+        <div class="grid2">
+          <label class="f fq"><span class="lt">6. Guest messages per day (roughly)</span><select name="6. Messages per day">
+              <option value="">Choose…</option>
+              <option>Under 20</option>
+              <option>20–50</option>
+              <option>50–150</option>
+              <option>More than 150</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+          <label class="f fq"><span class="lt">How quickly does your team usually reply?</span><select name="6. Reply time">
+              <option value="">Choose…</option>
+              <option>Within minutes</option>
+              <option>Within 1 hour</option>
+              <option>Within a few hours</option>
+              <option>Next day or later</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+        </div>
+        <label class="f fq"><span class="lt">7. In which languages do your guests write most often?</span><input type="text" name="7. Guest languages" placeholder="e.g. English, German, Spanish"></label>
+      </fieldset>
+
+      <!-- 4 -->
+      <fieldset class="block" style="margin:0">
+        <div class="block-head"><span class="n">4</span><div><h2>Stay experience and extra revenue</h2><p>What guests can do or buy before they arrive.</p></div></div>
+        <div class="q">
+          <span class="qt">8. Do you offer any of these before arrival?</span>
+          <span class="hint">Choose all that apply.</span>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="8. Online check-in" value="yes"><span>Online check-in</span></label>
+            <label class="chip"><input type="checkbox" name="8. Room upgrades" value="yes"><span>Room upgrades</span></label>
+            <label class="chip"><input type="checkbox" name="8. Spa / dining" value="yes"><span>Spa or dining</span></label>
+            <label class="chip"><input type="checkbox" name="8. Transfers" value="yes"><span>Transfers</span></label>
+            <label class="chip"><input type="checkbox" name="8. None yet" value="yes"><span>None yet</span></label>
+          </div>
+          <textarea name="8. How sold today" placeholder="How are they sold today? (e.g. by email, at reception, through a portal)" style="min-height:76px"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- 5 -->
+      <fieldset class="block" style="margin:0">
+        <div class="block-head"><span class="n">5</span><div><h2>Team, time and next steps</h2><p>Where your team's time goes, and what's coming.</p></div></div>
+        <label class="f fq"><span class="lt">9. Which daily tasks take your team the most time, or feel repetitive?</span><textarea name="9. Time-consuming tasks"></textarea></label>
+        <label class="f fq"><span class="lt">10. What is the one thing you would most like to improve in the next 6 months?</span><textarea name="10. Top improvement"></textarea></label>
+        <label class="f fq"><span class="lt">11. Are you planning to change or add any system soon? Any budget range or timing in mind?</span><textarea name="11. Plans, budget, timing" style="min-height:84px"></textarea></label>
+        <label class="f fq"><span class="lt">12. Who else should be involved in the decision?</span><input type="text" name="12. Decision makers" placeholder="e.g. owner, GM, IT, revenue manager"></label>
+      </fieldset>
+
+      <div class="submit">
+        <h2>That's it. Thank you!</h2>
+        <p>We'll send you a short summary with <span class="nw">2–3</span> practical recommendations within <span class="nw">1–2 working days</span>.</p>
+        <button class="btn btn-primary" type="submit">Send my answers</button>
+        <p class="small">Your answers go only to the Valinn team. See our <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/valinn-logo-white.svg" alt="Valinn">
+    <span>Independent hospitality tech advisory · © 2026 Valinn · <a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a class="fb" href="https://www.facebook.com/profile.php?id=61596169470019" target="_blank" rel="noopener" aria-label="Valinn on Facebook"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>Facebook</a></span>
+  </div>
+</footer>
+</body>
+</html>
