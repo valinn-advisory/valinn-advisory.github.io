@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /thanks.html
+Disallow: /assets/facebook/
+Disallow: /assets/linkedin/
 
 Sitemap: https://valinn-advisory.github.io/sitemap.xml

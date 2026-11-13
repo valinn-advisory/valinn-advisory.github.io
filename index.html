@@ -6,14 +6,18 @@
 <title>Valinn | Hospitality Tech Advisory</title>
 <meta name="description" content="Valinn is an independent hospitality-tech advisory. We help hotels choose the right tools for guest messaging, bookings, upsells and daily operations. Free for the hotel.">
 <meta property="og:title" content="Valinn | Hospitality Tech Advisory">
-<meta property="og:description" content="AI tools for every hotel, from the first guest message to the last invoice. Free for the hotel.">
+<meta property="og:description" content="Independent tech advice for 4- and 5-star hotels, from the first guest message to the last invoice. Free for the hotel.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://valinn-advisory.github.io/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://valinn-advisory.github.io/">
+<link rel="canonical" href="https://valinn-advisory.github.io/">
 <link rel="icon" type="image/svg+xml" href="assets/valinn-icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#071E3D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -117,6 +121,11 @@ section{padding-block:96px}
 .flow .dot{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:700;font-size:.9rem}
 .flow .row.zero .dot{background:#12B76A}
 
+.std{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.std li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;min-width:0}
+.std b{display:block;font-size:1.02rem;margin:10px 0 6px}
+.std span{color:var(--muted);font-size:.93rem}
+.std i{font-style:normal;font-weight:700;font-size:.78rem;letter-spacing:.18em;color:var(--blue)}
 .about{display:grid;grid-template-columns:minmax(0,240px) 1fr;gap:56px;align-items:center}
 .band{position:relative;padding:0;min-height:440px;display:flex;align-items:center;overflow:hidden;background:#EEF3FC}
 .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
@@ -203,6 +212,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
 footer .fb{color:inherit;text-decoration:none;white-space:nowrap}
 footer .fb svg{vertical-align:-3px;margin-right:5px}
 footer .fb:hover{color:#fff}
+footer .links{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+footer .links a{color:inherit}
 footer img{height:16px;width:auto;opacity:.9}
 
 @media (max-width:900px){
@@ -212,24 +223,30 @@ footer img{height:16px;width:auto;opacity:.9}
   .chat{position:relative;width:100%;top:0}
   .journey{display:none}
   .areas,.steps{grid-template-columns:1fr}
+  .std{grid-template-columns:1fr 1fr}
   .card.wide{grid-column:auto;flex-direction:column;align-items:flex-start}
   .about{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
   .timeline{grid-template-columns:1fr 1fr}
   .sky{height:90px}
-  .band{min-height:360px}
-  .band::after{background:linear-gradient(180deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.75) 55%,rgba(255,255,255,.2) 100%)}
-  .band img{object-position:70% center}
+  .band{min-height:520px;align-items:flex-start}
+  .band::after{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.85) 34%,rgba(255,255,255,0) 58%)}
+  .band img{object-position:72% center}
+  .band-text{padding-block:44px}
   section{padding-block:72px}
 }
 @media (max-width:520px){
   .facts{grid-template-columns:1fr}
+  .std{grid-template-columns:1fr}
   .timeline{grid-template-columns:1fr}
   form .two{grid-template-columns:1fr}
-  .nav .btn{display:none}
+  .nav .btn{padding:9px 14px;font-size:.84rem}
+  .nav .logo img{height:26px}
   .hero .actions .btn{width:100%}
 }
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Valinn", "description": "Independent hospitality-tech advisory. We help 4- and 5-star hotels choose the right tools for guest messaging, bookings, upsells and daily operations. Free for the hotel.", "url": "https://valinn-advisory.github.io/", "logo": "https://valinn-advisory.github.io/assets/apple-touch-icon.png", "image": "https://valinn-advisory.github.io/assets/img/og.jpg", "email": "grunicheva33@gmail.com", "founder": {"@type": "Person", "name": "Mariia Hrunicheva"}, "areaServed": "Worldwide", "sameAs": ["https://www.facebook.com/profile.php?id=61596169470019", "https://www.linkedin.com/in/%D0%BC%D0%B0%D1%80%D0%B8%D1%8F-%D0%B3%D1%80%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D0%B2%D0%B0-a16a05437/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it really free for the hotel?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The review, the recommendation and the introduction cost your hotel nothing. We're paid by the provider only if you decide to work with them."}}, {"@type": "Question", "name": "Which providers do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "Established hospitality-tech companies in AI guest messaging, guest experience, spa and wellness, and property management. We name the provider that fits once we understand your needs, so the advice comes first."}}, {"@type": "Question", "name": "Will this replace my team?", "acceptedAnswer": {"@type": "Answer", "text": "No. The goal is to take repetitive questions and copy-paste work off your team, so they have more time for guests who need a real person."}}, {"@type": "Question", "name": "We already have a PMS. Do we need to change it?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. Most of the tools we recommend connect to the systems you already use. If something doesn't integrate well, we'll tell you before you spend any time on a demo."}}, {"@type": "Question", "name": "What size of property do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly 4- and 5-star hotels and resorts, typically from around 50 rooms, and hotel groups. For a group, we look at all its hotels together."}}, {"@type": "Question", "name": "How long does the review take?", "acceptedAnswer": {"@type": "Answer", "text": "About 15 minutes of your time: a short conversation or a few written answers. Within a few working days you get a short summary with two or three recommendations for your property."}}]}</script>
 </head>
 <body>
 
@@ -241,6 +258,7 @@ footer img{height:16px;width:auto;opacity:.9}
       <li><a href="#how">How it works</a></li>
       <li><a href="#free">Why it's free</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="insights.html">Insights</a></li>
     </ul>
     <a class="btn btn-primary" href="#contact">Book a free review</a>
   </div>
@@ -251,7 +269,7 @@ footer img{height:16px;width:auto;opacity:.9}
   <div class="wrap hero-grid">
     <div>
       <span class="kicker">Hospitality tech advisory</span>
-      <h1>AI tools for every hotel, from the first guest message <span>to the last invoice.</span></h1>
+      <h1>Independent tech advice for 4- and 5-star hotels, from the first guest message <span>to the last invoice.</span></h1>
       <p class="lead">Valinn is an independent hospitality-tech advisory. We look at how your hotel handles guests and daily operations, and match you with a proven solution from our partner providers.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#contact">Book a free 15-min review</a>
@@ -306,7 +324,7 @@ footer img{height:16px;width:auto;opacity:.9}
 </section>
 
 <section class="band" aria-label="Hotel lobby">
-  <img src="assets/img/lobby.jpg" alt="Bright hotel lobby with a view of the sea" loading="lazy">
+  <img src="assets/img/lobby.jpg" alt="Bright hotel lobby with a view of the sea" loading="lazy" width="1916" height="821">
   <div class="wrap band-text">
     <p class="quote">Your team should spend its time with guests, not typing the same details into three different systems.</p>
   </div>
@@ -423,6 +441,23 @@ footer img{height:16px;width:auto;opacity:.9}
   </div>
 </section>
 
+<section id="standards">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our standards</span>
+      <h2>How we choose the providers we recommend</h2>
+      <p>We only suggest a tool when we would be comfortable recommending it to a friend who runs a hotel. Every provider has to pass five simple checks.</p>
+    </div>
+    <ul class="std" style="padding:0;margin:0">
+      <li><i>01</i><b>Proven in hotels</b><span>Real hotels already use it every day, not just a demo.</span></li>
+      <li><i>02</i><b>Works with your systems</b><span>It connects to the PMS and channels you already have.</span></li>
+      <li><i>03</i><b>Clear pricing</b><span>You know what you pay before you sign, with no surprises.</span></li>
+      <li><i>04</i><b>Real support</b><span>Help in your time zone and language when something goes wrong.</span></li>
+      <li><i>05</i><b>Easy to start small</b><span>A pilot on one property or one task before any big decision.</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="alt">
   <div class="wrap about">
     <figure class="portrait"><img src="assets/img/maria.jpg" alt="Mariia Hrunicheva, founder of Valinn" loading="lazy" width="720" height="900"><figcaption><b>Mariia Hrunicheva</b>Founder, Valinn</figcaption></figure>
@@ -430,8 +465,8 @@ footer img{height:16px;width:auto;opacity:.9}
       <span class="kicker">About Valinn</span>
       <h2>An independent advisor in a crowded market</h2>
       <p>There are hundreds of hotel tech products, and every one of them says it's the answer. Hotel teams rarely have time to compare them all. Valinn does that work for you: we keep track of what's proven, and we match it to the size, style and guests of your property.</p>
-      <p>We work with hotels, resorts, villa and apartment operators internationally, and we only recommend tools from established providers with a real track record in hospitality.</p>
-      <ul class="facts"><li><b>Independent</b>No product of our own to sell</li><li><b>Free</b>For the hotel, at every step</li><li><b>International</b>Hotels, resorts, villas, apartments</li></ul>
+      <p>We work with 4- and 5-star hotels, resorts and hotel groups internationally, and we only recommend tools from established providers with a real track record in hospitality.</p>
+      <ul class="facts"><li><b>Independent</b>No product of our own to sell</li><li><b>Free</b>For the hotel, at every step</li><li><b>International</b>Hotels, resorts and hotel groups</li></ul>
     </div>
   </div>
 </section>
@@ -461,11 +496,11 @@ footer img{height:16px;width:auto;opacity:.9}
       </details>
       <details>
         <summary>What size of property do you work with?</summary>
-        <p>Hotels, resorts and serviced apartments, typically from around 50 rooms or units. Villa and apartment operators count all the units they manage.</p>
+        <p>Mostly 4- and 5-star hotels and resorts, typically from around 50 rooms, and hotel groups. For a group, we look at all its hotels together.</p>
       </details>
       <details>
-        <summary>What if the timing isn't right?</summary>
-        <p>That's completely fine. Just tell us, and we won't keep chasing you.</p>
+        <summary>How long does the review take?</summary>
+        <p>About 15 minutes of your time: a short conversation or a few written answers. Within a few working days you get a short summary with two or three recommendations for your property.</p>
       </details>
     </div>
   </div>
@@ -475,7 +510,7 @@ footer img{height:16px;width:auto;opacity:.9}
   <div class="wrap contact-grid">
     <div class="intro">
       <span class="kicker">Get in touch</span>
-      <h2>Book your free 15-minute review</h2>
+      <h2>Book your free <span style="white-space:nowrap">15-minute</span> review</h2>
       <p>Tell us a little about your property, and we'll come back to you within one business day.</p>
       <div class="direct">
         <a href="mailto:grunicheva33@gmail.com"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>grunicheva33@gmail.com</a>
@@ -511,7 +546,7 @@ footer img{height:16px;width:auto;opacity:.9}
 <footer>
   <div class="wrap">
     <img src="assets/valinn-logo-white.svg" alt="Valinn">
-    <span>Independent hospitality tech advisory · © 2026 Valinn · <a href="privacy.html" style="color:inherit">Privacy Policy</a> · <a class="fb" href="https://www.facebook.com/profile.php?id=61596169470019" target="_blank" rel="noopener" aria-label="Valinn on Facebook"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>Facebook</a></span>
+    <span class="links">Independent hospitality tech advisory · © 2026 Valinn · <a href="insights.html">Insights</a> · <a href="privacy.html">Privacy Policy</a> · <a class="fb" href="https://www.linkedin.com/in/%D0%BC%D0%B0%D1%80%D0%B8%D1%8F-%D0%B3%D1%80%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D0%B2%D0%B0-a16a05437/" target="_blank" rel="noopener" aria-label="Mariia Hrunicheva on LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a> · <a class="fb" href="https://www.facebook.com/profile.php?id=61596169470019" target="_blank" rel="noopener" aria-label="Valinn on Facebook"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>Facebook</a></span>
   </div>
 </footer>
 
