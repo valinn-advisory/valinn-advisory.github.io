@@ -75,7 +75,8 @@ header.scrolled{border-bottom-color:var(--line)}
 .msg.out .who{color:#CFE0FF}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-size:.72rem;font-weight:600;color:#0E7A4C;background:#E7F8EF;border-radius:999px;padding:4px 9px}
-.journey{margin-top:170px}
+.journey{margin-top:250px}
+.msg.out.staff{background:#0B1F3F}
 
 .journey .path{stroke-dasharray:2 9;stroke-linecap:round;animation:flow 22s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-440}}
@@ -281,8 +282,9 @@ footer img{height:16px;width:auto;opacity:.9}
     <div class="visual">
     <div class="chat" aria-hidden="true">
       <div class="msg in"><span class="who">Guest · 23:47</span>Hi! Could we check in early tomorrow? Our flight lands at 7am.</div>
-      <div class="msg out"><span class="who">Hotel assistant · 23:47</span>Of course! Your room will be ready at 11:00, and I've let housekeeping know. See you tomorrow!</div>
-      <div class="tags"><span>Housekeeping ✓</span><span>Booking updated ✓</span><span>Invoice updated ✓</span></div>
+      <div class="msg out"><span class="who">Hotel assistant · 23:47</span>Our rooms are full tonight, so I can't promise it yet. I've passed your request to the front desk, and they'll confirm by 9:00.</div>
+      <div class="msg out staff"><span class="who">Anna, front desk · 08:40</span>Good news! Your room will be ready at 11:00.</div>
+      <div class="tags"><span>Availability checked ✓</span><span>Sent to front desk ✓</span><span>Confirmed by staff ✓</span></div>
     </div>
     <svg class="journey" viewBox="0 0 560 460" role="img" aria-label="A guest journey line connecting guest message, booking, check-in, spa and stay, and invoice">
       <defs>
