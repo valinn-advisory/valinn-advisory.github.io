@@ -158,6 +158,19 @@ section{padding-block:96px}
 .facts{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .facts li{border-top:2px solid var(--blue);padding-top:12px;font-size:.88rem;color:var(--muted);min-width:0}
 .facts b{display:block;color:var(--ink);font-size:1rem}
+.founder{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--blue);background:#fff;border-radius:0 14px 14px 0;color:var(--ink);font-size:1.02rem;line-height:1.6}
+.founder cite{display:block;margin-top:10px;font-style:normal;font-size:.88rem;font-weight:600;color:var(--muted)}
+.fwlink{margin-top:18px;font-weight:600}
+.scope{margin-top:56px}
+.scope h3{font-size:1.25rem;margin-bottom:16px}
+.scope-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
+.sc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;min-width:0}
+.sc.us{border-color:var(--blue-line);box-shadow:0 10px 26px rgba(10,102,255,.08)}
+.sc .who{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.sc ul{margin:10px 0 0;padding-left:18px;color:var(--ink-2)}
+.sc li{margin:6px 0}
+@media (max-width:900px){.scope-grid{grid-template-columns:1fr}}
+
 .badge{background:var(--navy);border-radius:24px;padding:36px 32px;color:#fff;box-shadow:0 20px 50px rgba(7,30,61,.18)}
 .badge img{height:34px;width:auto;margin-bottom:28px}
 .badge ul{list-style:none;margin:0;padding:0;display:grid;gap:16px}
@@ -465,10 +478,21 @@ footer img{height:16px;width:auto;opacity:.9}
     <figure class="portrait"><img src="assets/img/maria.jpg" alt="Mariia Hrunicheva, founder of Valinn" loading="lazy" width="720" height="900"><figcaption><b>Mariia Hrunicheva</b>Founder, Valinn</figcaption></figure>
     <div>
       <span class="kicker">About Valinn</span>
-      <h2>An independent advisor in a crowded market</h2>
-      <p>There are hundreds of hotel tech products, and every one of them says it's the answer. Hotel teams rarely have time to compare them all. Valinn does that work for you: we keep track of what's proven, and we match it to the size, style and guests of your property.</p>
-      <p>We work with hotels, resorts and hotel groups of every size internationally, and we only recommend tools from established providers with a real track record in hospitality.</p>
-      <ul class="facts"><li><b>Independent</b>No product of our own to sell</li><li><b>Free</b>For the hotel, at every step</li><li><b>International</b>Hotels, resorts and hotel groups</li></ul>
+      <h2>Research first, recommendation second</h2>
+      <p>There are hundreds of hotel tech products, and every one of them says it's the answer. Hotel teams rarely have time to compare them all. Valinn does that work for you. We have no product of our own, so our only job is to find what truly fits your property.</p>
+      <blockquote class="founder">"Before I recommend any tool, I check it myself. I message hotels as a real guest, find out which systems it really connects with, ask the provider for written pricing for your size, and look for hotels that already use it. If nothing fits, I'll tell you."<cite>Mariia Hrunicheva, founder</cite></blockquote>
+      <ul class="facts"><li><b>Research-based</b>Every tool checked against the same criteria</li><li><b>Independent</b>No product of our own to sell</li><li><b>Free</b>For the hotel, at every step</li></ul>
+      <p class="fwlink"><a href="sample-review.html#framework">How we evaluate providers&nbsp;→</a></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="scope">
+      <h3>Who does what</h3>
+      <div class="scope-grid">
+        <div class="sc us"><span class="who">Valinn</span><ul><li>Free review of your current set-up</li><li>A shortlist of one or two providers that pass our checks</li><li>An introduction, plus a checklist of questions for the demo</li><li>Help comparing the offers you receive</li><li>A check-in by email 30 and 90 days after launch</li></ul></div>
+        <div class="sc"><span class="who">The provider</span><ul><li>Price and contract</li><li>Setup and connection to your systems</li><li>Training for your team</li><li>Technical support</li></ul></div>
+        <div class="sc"><span class="who">Your hotel</span><ul><li>Whether to see a demo at all</li><li>Which option to choose, if any</li><li>When to start</li></ul></div>
+      </div>
     </div>
   </div>
 </section>
