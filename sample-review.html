@@ -255,6 +255,7 @@ footer img{height:16px;width:auto;opacity:.9}
 .finds{display:grid;gap:12px}
 .find{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;min-width:0}
 .find .m{font-size:1.6rem;font-weight:700;color:var(--ink);line-height:1.1}
+.src{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:2px 8px;margin-top:6px;vertical-align:1px;white-space:nowrap}.src.h{background:#E8F0FF;color:#0A4FC4}.src.t{background:#E7F8EF;color:#0E7A4C}.src.e{background:#F1F3F7;color:#5B6B82}
 .find .m small{display:block;font-size:.78rem;font-weight:500;color:var(--muted);margin-top:4px}
 .find h4{margin:0 0 4px;font-size:1.04rem}
 .find p{color:var(--ink-2);font-size:.97rem}
@@ -315,14 +316,14 @@ footer img{height:16px;width:auto;opacity:.9}
   <div class="sr-hero">
     <span class="kicker">Sample review</span>
     <h1>What a Valinn tech review looks like</h1>
-    <p>After you answer a few short questions, we prepare a report like this one. It explains what we found, compares the realistic options and gives two or three clear recommendations. It's free, and there's no obligation to act on it.</p>
+    <p>After you answer a few short questions, we prepare a report like this one. Every review includes what we found, a comparison of realistic options, two or three clear recommendations and next steps. How deep it goes depends on how much your hotel shares with us. It's free, and there's no obligation to act on it.</p>
     <nav class="toc" aria-label="On this page"><a href="#profile">Hotel profile</a><a href="#findings">Findings</a><a href="#options">Options compared</a><a href="#recommendations">Recommendations</a><a href="#framework">How we evaluate providers</a></nav>
   </div>
 
   <article class="report">
     <div class="r-top">
       <div><span class="lbl">Free Tech Review · Illustrative example</span><h2>Example Resort: 5★ beach resort, 180 rooms</h2></div>
-      <div class="stamp">Based on: written questionnaire + one guest-message test<br>Prepared in 2 working days</div>
+      <div class="stamp">Based on: written questionnaire + one guest-message test<br>Prepared within 2–3 working days</div>
     </div>
 
     <section class="r-sec" id="profile">
@@ -339,13 +340,13 @@ footer img{height:16px;width:auto;opacity:.9}
 
     <section class="r-sec" id="findings">
       <h3><span class="no">02</span>What we found</h3>
-      <p class="lead">Five issues, ranked by how much they cost the hotel in lost bookings or staff time.</p>
+      <p class="lead">Five issues, ranked by how much they cost the hotel in lost bookings or staff time. Each figure shows where it comes from: <span class="src h">Hotel data</span> what the hotel told us, <span class="src t">Our test</span> what we checked ourselves, <span class="src e">Estimate</span> our assumption.</p>
       <div class="finds">
-        <div class="find hi"><div class="m">4 h 10 min<small>first reply in our test</small></div><div><h4>Guest questions wait too long</h4><p>About 70 messages a day arrive across email, WhatsApp, Instagram and OTA chat. Between 23:00 and 07:00 nobody answers. Our test question about a sea-view room got a reply after four hours, with a link to the website instead of an answer.</p></div></div>
-        <div class="find hi"><div class="m">~2 h<small>per day of re-typing</small></div><div><h4>The same details are typed twice</h4><p>Special requests from OTA bookings don't reach the PMS automatically. The front desk copies them by hand every morning, and mistakes show up at check-in.</p></div></div>
-        <div class="find md"><div class="m">0%<small>of upsells offered before arrival</small></div><div><h4>Upgrades and extras are only sold at the desk</h4><p>Late check-out, room upgrades and airport transfers are offered only at check-in, when the queue is longest and guests have already made their plans.</p></div></div>
-        <div class="find md"><div class="m">~45%<small>spa use on weekdays</small></div><div><h4>The spa can only be booked by phone</h4><p>Guests can't see free slots or book online, so many simply don't try. The spa team also spends time on the phone instead of with guests.</p></div></div>
-        <div class="find"><div class="m">2 of 4<small>main guest languages covered</small></div><div><h4>German and French guests get English replies</h4><p>The team writes in English and Spanish. That's workable, but replies in the guest's own language feel more personal and reduce back-and-forth.</p></div></div>
+        <div class="find hi"><div class="m">4 h 10 min<small>first reply in our test</small><span class="src t">Our test</span></div><div><h4>Guest questions wait too long</h4><p>About 70 messages a day arrive across email, WhatsApp, Instagram and OTA chat. Between 23:00 and 07:00 nobody answers. Our test question about a sea-view room got a reply after four hours, with a link to the website instead of an answer.</p></div></div>
+        <div class="find hi"><div class="m">~2 h<small>per day of re-typing</small><span class="src h">Hotel data</span></div><div><h4>The same details are typed twice</h4><p>Special requests from OTA bookings don't reach the PMS automatically. The front desk copies them by hand every morning, and mistakes show up at check-in.</p></div></div>
+        <div class="find md"><div class="m">0%<small>of upsells offered before arrival</small><span class="src h">Hotel data</span></div><div><h4>Upgrades and extras are only sold at the desk</h4><p>Late check-out, room upgrades and airport transfers are offered only at check-in, when the queue is longest and guests have already made their plans.</p></div></div>
+        <div class="find md"><div class="m">~45%<small>spa use on weekdays</small><span class="src h">Hotel data</span></div><div><h4>The spa can only be booked by phone</h4><p>Guests can't see free slots or book online, so many simply don't try. The spa team also spends time on the phone instead of with guests.</p></div></div>
+        <div class="find"><div class="m">2 of 4<small>main guest languages covered</small><span class="src h">Hotel data</span></div><div><h4>German and French guests get English replies</h4><p>The team writes in English and Spanish. That's workable, but replies in the guest's own language feel more personal and reduce back-and-forth.</p></div></div>
       </div>
     </section>
 
@@ -373,13 +374,13 @@ footer img{height:16px;width:auto;opacity:.9}
 
     <section class="r-sec" id="recommendations">
       <h3><span class="no">04</span>Our recommendations</h3>
-      <p class="lead">Small steps first. Each one should pay for itself before the next.</p>
+      <p class="lead">Small steps first. Measure the impact of each step before expanding.</p>
       <div class="recs">
-        <div class="rec"><h4>Start with an AI assistant connected to the PMS, with hand-off to staff</h4><p>It replies within a minute, day and night, in the guest's language. It answers from real data (rooms, prices, policies) and passes anything it can't confirm, like an early check-in, to the front desk. Run it as a 60-day pilot on WhatsApp and the website first.</p><div class="kpi"><span>First reply time</span><span>% answered without staff</span><span>Direct bookings from chat</span></div></div>
-        <div class="rec"><h4>Fix the re-typing before buying anything new</h4><p>Check whether your PMS and channel manager already offer a certified two-way connection that passes special requests. Often it exists and just isn't switched on. This costs little and saves about two hours a day.</p><div class="kpi"><span>Minutes of re-typing per day</span><span>Errors at check-in</span></div></div>
+        <div class="rec"><h4>Start with an AI assistant connected to the PMS, with hand-off to staff</h4><p>It can reply within minutes, day and night, in the guest's language. Check this in the demo and the pilot, not only on paper. It answers from real data (rooms, prices, policies) and passes anything it can't confirm, like an early check-in, to the front desk. Run it as a 60-day pilot on WhatsApp and the website first.</p><div class="kpi"><span>First reply time</span><span>% answered without staff</span><span>Direct bookings from chat</span></div></div>
+        <div class="rec"><h4>Fix the re-typing before buying anything new</h4><p>Check whether your PMS and channel manager already offer a certified two-way connection that passes special requests. Often it exists and just isn't switched on. This costs little and could save about two hours a day <span class="src e">Estimate</span>.</p><div class="kpi"><span>Minutes of re-typing per day</span><span>Errors at check-in</span></div></div>
         <div class="rec"><h4>Add online check-in with upsells in 3–6 months</h4><p>Once messaging works, add pre-arrival check-in with optional extras, ideally from the same provider, so the team doesn't learn yet another system.</p><div class="kpi"><span>% guests checked in online</span><span>Upsell revenue per stay</span></div></div>
       </div>
-      <div class="not"><h4>What we would not do now</h4><ul><li>Replace the PMS in the middle of the year. Plan a PMS review in 12 months instead.</li><li>Buy a separate spa system before checking whether the guest platform can cover spa booking.</li><li>Sign a contract longer than 12 months for any new tool.</li></ul></div>
+      <div class="not"><h4>What we would not do now</h4><ul><li>Replace the PMS in the middle of the year. Plan a PMS review in 12 months instead.</li><li>Buy a separate spa system before checking whether the guest platform can cover spa booking.</li><li>Commit to a long contract before a new tool has proven its value. Check the exit terms first.</li></ul></div>
     </section>
 
     <section class="r-sec">
@@ -427,7 +428,7 @@ footer img{height:16px;width:auto;opacity:.9}
 
   <div class="cta">
     <h2>Want a review like this for your hotel?</h2>
-    <p>Answer a few short questions in writing. You'll get your own report within a few working days, free and with no obligation.</p>
+    <p>Answer a few short questions in writing. You'll get your own report within 2–3 working days, free and with no obligation.</p>
     <div class="actions"><a class="btn btn-primary" href="review.html">Start the questionnaire</a><a class="btn btn-ghost" href="index.html#contact">Request a free review</a></div>
   </div>
 </main>
