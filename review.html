@@ -121,6 +121,7 @@ footer img{height:16px;width:auto;opacity:.9}
   .submit .btn{width:100%;min-width:0}
   .form-wrap{padding-block:0 64px}
 }
+.backrow{margin-bottom:28px}.backlink{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;font-weight:600;color:var(--blue);text-decoration:none;padding:9px 18px;border:1.5px solid var(--line);border-radius:999px;background:#fff;transition:border-color .15s}.backlink:hover{border-color:var(--blue)}
 </style>
 </head>
 <body>
@@ -134,6 +135,7 @@ footer img{height:16px;width:auto;opacity:.9}
 <main>
   <section class="hero">
     <div class="wrap">
+      <div class="backrow"><a class="backlink" href="index.html" onclick="if(document.referrer.indexOf(location.origin)===0&&history.length>1){history.back();return false;}">← Back</a></div>
       <span class="kicker">Free Hotel Tech Review</span>
       <h1>Tell us how your hotel works today. <span>We'll show you what to improve.</span></h1>
       <p class="lead">Thank you for your interest! These short questions help us understand how your hotel works today. There are no right or wrong answers, and everything stays confidential.</p>

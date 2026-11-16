@@ -224,6 +224,7 @@ footer img{height:16px;width:auto;opacity:.9}
   .nav .logo img{height:26px}
   .hero .actions .btn{width:100%}
 }
+.backrow{margin-bottom:28px}.backlink{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;font-weight:600;color:var(--blue);text-decoration:none;padding:9px 18px;border:1.5px solid var(--line);border-radius:999px;background:#fff;transition:border-color .15s}.backlink:hover{border-color:var(--blue)}
 </style>
 <style>
 .ins{padding-block:64px 104px}.ins h1{font-size:clamp(2rem,3.4vw,2.6rem);margin:16px 0 12px}.ins .intro{color:var(--ink-2);font-size:1.08rem;max-width:40em}.posts{display:grid;gap:24px;margin-top:44px}.post{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:32px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s}.post:hover{box-shadow:0 16px 36px rgba(7,30,61,.10);transform:translateY(-2px)}.post img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}.post .tx{padding:28px 28px 28px 0;min-width:0}.post .meta{font-size:.82rem;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}.post h2{font-size:1.45rem;margin:10px 0 10px}.post p{color:var(--ink-2)}.post .more{display:inline-block;margin-top:16px;color:var(--blue);font-weight:600}@media (max-width:760px){.post{grid-template-columns:1fr;gap:0}.post .tx{padding:22px}}
@@ -237,6 +238,7 @@ footer img{height:16px;width:auto;opacity:.9}
   </div>
 </header>
 <main class="wrap ins">
+  <div class="backrow"><a class="backlink" href="index.html" onclick="if(document.referrer.indexOf(location.origin)===0&&history.length>1){history.back();return false;}">← Back</a></div>
   <span class="kicker">Insights</span>
   <h1>Notes from the guest's side</h1>
   <p class="intro">Small experiments and honest observations about how hotels answer guests, choose their tools and win direct bookings.</p>

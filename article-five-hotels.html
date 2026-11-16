@@ -224,6 +224,7 @@ footer img{height:16px;width:auto;opacity:.9}
   .nav .logo img{height:26px}
   .hero .actions .btn{width:100%}
 }
+.backrow{margin-bottom:28px}.backlink{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;font-weight:600;color:var(--blue);text-decoration:none;padding:9px 18px;border:1.5px solid var(--line);border-radius:999px;background:#fff;transition:border-color .15s}.backlink:hover{border-color:var(--blue)}
 </style>
 <style>
 .art{max-width:720px;padding-block:56px 104px}.art .back{font-size:.92rem;color:var(--muted);text-decoration:none}.art .back:hover{color:var(--blue)}.art h1{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:18px 0 14px}.art .meta{color:var(--muted);font-size:.92rem}.art .cover{width:100%;height:auto;margin:30px 0 8px;border-radius:var(--radius);border:1px solid var(--line)}.art h2{font-size:1.35rem;margin:40px 0 12px}.art p{color:var(--ink-2);font-size:1.08rem;line-height:1.72;margin:0 0 18px}.art blockquote{margin:22px 0;padding:18px 22px;border-left:3px solid var(--blue);background:var(--bg-alt);border-radius:0 12px 12px 0;color:var(--ink);font-size:1.05rem;line-height:1.6}.tbl{overflow-x:auto;margin:20px 0 24px;border:1px solid var(--line);border-radius:14px}.tbl table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.tbl th{background:var(--bg-alt);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}.tbl tr:last-child td{border-bottom:0}.tbl td:last-child{color:#B42318;font-weight:500}.art .sig{font-weight:600;color:var(--ink);margin-top:32px}.art .src{font-size:.9rem;color:var(--muted);word-break:break-word}.orig{margin-top:36px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}.orig p{margin:0;font-size:1rem}
@@ -238,7 +239,7 @@ footer img{height:16px;width:auto;opacity:.9}
   </div>
 </header>
 <main class="wrap art">
-  <a class="back" href="insights.html">← All insights</a>
+  <div class="backrow"><a class="backlink" href="insights.html" onclick="if(document.referrer.indexOf(location.origin)===0&&history.length>1){history.back();return false;}">← Back</a></div>
   <h1>I messaged five big hotels as a normal guest. Not one of them actually answered me.</h1>
   <p class="meta">Mariia Hrunicheva · 13 November 2026 · 5 min read</p>
   <img class="cover" src="assets/img/insights/five-hotels-cover.jpg" alt="Five hotels, five replies, zero answers" width="1600" height="900">
