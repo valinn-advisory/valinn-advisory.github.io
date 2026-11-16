@@ -140,7 +140,7 @@ footer img{height:16px;width:auto;opacity:.9}
       <h1>Tell us how your hotel works today. <span>We'll show you what to improve.</span></h1>
       <p class="lead">Thank you for your interest! These short questions help us understand how your hotel works today. There are no right or wrong answers, and everything stays confidential.</p>
       <ul class="facts">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>About 5–7 minutes</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>About 7–8 minutes</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Confidential</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Free for the hotel</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Summary in 2–3 working days</li>
@@ -248,33 +248,71 @@ footer img{height:16px;width:auto;opacity:.9}
             </select>
           </label>
         </div>
-        <label class="f fq"><span class="lt">7. In which languages do your guests write most often?</span><input type="text" name="7. Guest languages" placeholder="e.g. English, German, Spanish"></label>
+        <div class="grid2">
+          <label class="f fq"><span class="lt">7. Phone calls to reception per day (roughly)</span><select name="7. Calls per day">
+              <option value="">Choose…</option>
+              <option>Under 10</option>
+              <option>10–30</option>
+              <option>30–80</option>
+              <option>More than 80</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+          <label class="f fq"><span class="lt">Do some calls go unanswered?</span><select name="7. Missed calls">
+              <option value="">Choose…</option>
+              <option>Rarely</option>
+              <option>Sometimes</option>
+              <option>Often</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+        </div>
+        <div class="q">
+          <span class="qt">8. Is your reception open 24/7? Who answers guests at night?</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="8. Reception 24/7" value="Yes, staffed 24/7"><span>Yes, staffed 24/7</span></label>
+            <label class="chip"><input type="radio" name="8. Reception 24/7" value="Night porter / security only"><span>Night porter or security only</span></label>
+            <label class="chip"><input type="radio" name="8. Reception 24/7" value="No one at night"><span>No one at night</span></label>
+          </div>
+        </div>
+        <label class="f fq"><span class="lt">9. In which languages do your guests write most often?</span><input type="text" name="9. Guest languages" placeholder="e.g. English, German, Spanish"></label>
       </fieldset>
 
       <!-- 4 -->
       <fieldset class="block" style="margin:0">
         <div class="block-head"><span class="n">4</span><div><h2>Stay experience and extra revenue</h2><p>What guests can do or buy before they arrive.</p></div></div>
         <div class="q">
-          <span class="qt">8. Do you offer any of these before arrival?</span>
+          <span class="qt">10. Do you offer any of these before arrival?</span>
           <span class="hint">Choose all that apply.</span>
           <div class="chips">
-            <label class="chip"><input type="checkbox" name="8. Online check-in" value="yes"><span>Online check-in</span></label>
-            <label class="chip"><input type="checkbox" name="8. Room upgrades" value="yes"><span>Room upgrades</span></label>
-            <label class="chip"><input type="checkbox" name="8. Spa / dining" value="yes"><span>Spa or dining</span></label>
-            <label class="chip"><input type="checkbox" name="8. Transfers" value="yes"><span>Transfers</span></label>
-            <label class="chip"><input type="checkbox" name="8. None yet" value="yes"><span>None yet</span></label>
+            <label class="chip"><input type="checkbox" name="10. Online check-in" value="yes"><span>Online check-in</span></label>
+            <label class="chip"><input type="checkbox" name="10. Room upgrades" value="yes"><span>Room upgrades</span></label>
+            <label class="chip"><input type="checkbox" name="10. Spa / dining" value="yes"><span>Spa or dining</span></label>
+            <label class="chip"><input type="checkbox" name="10. Transfers" value="yes"><span>Transfers</span></label>
+            <label class="chip"><input type="checkbox" name="10. None yet" value="yes"><span>None yet</span></label>
           </div>
-          <textarea name="8. How sold today" placeholder="How are they sold today? (e.g. by email, at reception, through a portal)" style="min-height:76px"></textarea>
+          <textarea name="10. How sold today" placeholder="How are they sold today? (e.g. by email, at reception, through a portal)" style="min-height:76px"></textarea>
+        </div>
+        <div class="q">
+          <span class="qt">11. Do you have a spa or wellness area with treatments (massage, beauty)? How do guests book them today?</span>
+          <span class="hint">Choose all that apply.</span>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="11. No spa" value="yes"><span>No spa with treatments</span></label>
+            <label class="chip"><input type="checkbox" name="11. Spa booked by phone" value="yes"><span>By phone</span></label>
+            <label class="chip"><input type="checkbox" name="11. Spa booked by email" value="yes"><span>By email</span></label>
+            <label class="chip"><input type="checkbox" name="11. Spa booked at reception" value="yes"><span>At reception or the spa desk</span></label>
+            <label class="chip"><input type="checkbox" name="11. Spa booked online" value="yes"><span>Online</span></label>
+          </div>
         </div>
       </fieldset>
 
       <!-- 5 -->
       <fieldset class="block" style="margin:0">
         <div class="block-head"><span class="n">5</span><div><h2>Team, time and next steps</h2><p>Where your team's time goes, and what's coming.</p></div></div>
-        <label class="f fq"><span class="lt">9. Which daily tasks take your team the most time, or feel repetitive?</span><textarea name="9. Time-consuming tasks"></textarea></label>
-        <label class="f fq"><span class="lt">10. What is the one thing you would most like to improve in the next 6 months?</span><textarea name="10. Top improvement"></textarea></label>
-        <label class="f fq"><span class="lt">11. Are you planning to change or add any system soon? Any budget range or timing in mind?</span><textarea name="11. Plans, budget, timing" style="min-height:84px"></textarea></label>
-        <label class="f fq"><span class="lt">12. Who else should be involved in the decision?</span><input type="text" name="12. Decision makers" placeholder="e.g. owner, GM, IT, revenue manager"></label>
+        <label class="f fq"><span class="lt">12. Which daily tasks take your team the most time, or feel repetitive?</span><textarea name="12. Time-consuming tasks"></textarea></label>
+        <label class="f fq"><span class="lt">13. What is the one thing you would most like to improve in the next 6 months?</span><textarea name="13. Top improvement"></textarea></label>
+        <label class="f fq"><span class="lt">14. Are you planning to change or add any system soon? Any budget range or timing in mind?</span><textarea name="14. Plans, budget, timing" style="min-height:84px"></textarea></label>
+        <label class="f fq"><span class="lt">15. Who else should be involved in the decision?</span><input type="text" name="15. Decision makers" placeholder="e.g. owner, GM, IT, revenue manager"></label>
       </fieldset>
 
       <div class="submit">
