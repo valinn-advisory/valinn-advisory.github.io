@@ -45,6 +45,9 @@ p{margin:0}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(10,102,255,.34)}
 .btn-ghost{color:var(--ink);background:transparent;border:1.5px solid var(--line)}
 .btn-ghost:hover{border-color:var(--ink)}
+.btn-outline{color:var(--blue);background:#fff;border:2px solid var(--blue);padding:12px 24px}
+.btn-outline:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+.sec-cta{margin-top:20px}
 
 /* header */
 header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
@@ -202,7 +205,8 @@ section{padding-block:96px}
 .about .sign{margin-top:22px;font-weight:600}
 .about .sign span{display:block;font-weight:400;color:var(--muted);font-size:.93rem}
 
-.faq{max-width:820px}
+.faq{max-width:820px;margin-left:auto;margin-right:auto}
+#faq .sec-head{margin-left:auto;margin-right:auto;text-align:center}
 .faq details{border-bottom:1px solid var(--line);padding:22px 0}
 .faq summary{cursor:pointer;font-weight:600;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
 .faq summary::-webkit-details-marker{display:none}
@@ -428,7 +432,8 @@ footer img{height:16px;width:auto;opacity:.9}
     <div class="sec-head">
       <span class="kicker">How it works</span>
       <h2>Three simple steps</h2>
-      <p>You stay in control the whole time. If nothing fits, we'll tell you honestly. <a href="sample-review.html">See a sample review&nbsp;→</a></p>
+      <p>You stay in control the whole time. If nothing fits, we'll tell you honestly.</p>
+      <div class="sec-cta"><a class="btn btn-outline" href="sample-review.html">See a sample review&nbsp;→</a></div>
     </div>
     <div class="steps">
       <div class="step">
